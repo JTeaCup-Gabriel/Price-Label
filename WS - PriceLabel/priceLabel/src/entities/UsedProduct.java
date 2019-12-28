@@ -28,12 +28,10 @@ public class UsedProduct extends Product {
 	}
 
 	@Override
-	public String priceTag() {
+	public final String priceTag() {
 
 		StringBuilder sb = new StringBuilder();
-
 		sb.append(name + "(used) $ " + df.format(price) + " (Manufacture date: " + sdf.format(manufactureDate) + ")");
-
 		return sb.toString();
 	}
 

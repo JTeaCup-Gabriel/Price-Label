@@ -30,13 +30,10 @@ public class ImportedProduct extends Product {
 	}
 
 	@Override
-	public String priceTag() {
-
+	public final String priceTag() {
 
 		StringBuilder sb = new StringBuilder();
-
 		sb.append(name + " $ " + df.format(totalPrice()) + " (Customs fee: $ " + df.format(customsFee) +")");
-
 		return sb.toString();
 	}
 

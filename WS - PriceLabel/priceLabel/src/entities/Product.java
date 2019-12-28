@@ -36,9 +36,7 @@ public class Product {
 	public String priceTag() {
 
 		StringBuilder sb = new StringBuilder();
-
 		sb.append(name + " $ " + df.format(price));
-
 		return sb.toString();
 	}
 }
