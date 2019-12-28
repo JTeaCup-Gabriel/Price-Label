@@ -1,9 +1,12 @@
 package entities;
 
+import java.text.DecimalFormat;
+
 public class Product {
 
-	private String name;
-	private Double price;
+	private static DecimalFormat df = new DecimalFormat("0.00");
+	protected String name;
+	protected Double price;
 	// ------------------------------------------------------------------------ >
 
 	public Product() {
@@ -14,6 +17,7 @@ public class Product {
 		this.price = price;
 	}
 
+	// ------------------------------------------------------------------------ >
 	public String getName() {
 		return name;
 	}
@@ -36,7 +40,7 @@ public class Product {
 
 		StringBuilder sb = new StringBuilder();
 
-		sb.append(name + " $ " + price);
+		sb.append(name + " $ " + df.format(price));
 
 		return sb.toString();
 	}
