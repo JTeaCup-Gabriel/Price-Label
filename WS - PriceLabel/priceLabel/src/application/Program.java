@@ -13,6 +13,7 @@ import entities.Product;
 import entities.UsedProduct;
 
 public class Program {
+	// Final Algorithm
 
 	public static void main(String[] args) throws ParseException {
 		
