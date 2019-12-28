@@ -19,27 +19,23 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Scanner sc = new Scanner(System.in);
-
 		List<Product> list = new ArrayList<Product>();
-		// -------------------------------------------------------------------- >
-		/*
-		 * Product product3 = new ImportedProduct("Tablet", 260.0, 20.0); Product
-		 * product = new Product("Notebook", 1100.0); Product product2 = new
-		 * UsedProduct("Iphone", 4000.00, sdf.parse("20/11/2016"));
-		 */
-		// -------------------------------------------------------------------- >
+
 		System.out.print("Enter the number of products: ");
 		int N = sc.nextInt();
-		// -------------------------------------------------------------------- >
+
 		for (int i = 1; i <= N; i++) {
 
 			System.out.println("Product #" + i + " data:");
 
 			System.out.print("Common, used or imported (c/u/i)? ");
 			char type = sc.next().toLowerCase().charAt(0);
+
 			sc.nextLine();
+
 			System.out.print("Name: ");
 			String productName = sc.nextLine();
+
 			System.out.print("Price: ");
 			double productPrice = sc.nextDouble();
 
@@ -48,15 +44,12 @@ public class Program {
 
 			case 1:
 
-				// System.out.println("comum");
 				Product product = new Product(productName, productPrice);
 				list.add(product);
 
 				break;
 
 			case 2:
-
-				// System.out.println("usado");
 
 				System.out.print("Manufacture date (DD/MM/YYYY): ");
 				Date productDate = sdf.parse(sc.next());
@@ -67,7 +60,6 @@ public class Program {
 				break;
 
 			case 3:
-				System.out.println("importado");
 
 				System.out.print("Customs fee: ");
 				double customsFee = sc.nextDouble();
@@ -79,7 +71,6 @@ public class Program {
 
 		}
 
-		// -------------------------------------------------------------------- >
 		System.out.println("\nPRICE TAGS:");
 
 		for (Product p : list) {
@@ -87,14 +78,6 @@ public class Program {
 			System.out.println(p.priceTag());
 
 		}
-
-		/*
-		 * System.out.println(product3.priceTag());
-		 * System.out.println(product.priceTag());
-		 * System.out.println(product2.priceTag());
-		 */
-
-		// -------------------------------------------------------------------- >
 
 		sc.close();
 

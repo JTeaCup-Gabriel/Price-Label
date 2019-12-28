@@ -7,7 +7,6 @@ public class Product {
 	private static DecimalFormat df = new DecimalFormat("0.00");
 	protected String name;
 	protected Double price;
-	// ------------------------------------------------------------------------ >
 
 	public Product() {
 	}
@@ -17,7 +16,6 @@ public class Product {
 		this.price = price;
 	}
 
-	// ------------------------------------------------------------------------ >
 	public String getName() {
 		return name;
 	}
@@ -34,7 +32,6 @@ public class Product {
 		this.price = price;
 	}
 
-	// ------------------------------------------------------------------------ >
 
 	public String priceTag() {
 

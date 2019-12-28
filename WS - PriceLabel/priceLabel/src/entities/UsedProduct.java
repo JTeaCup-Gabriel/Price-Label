@@ -9,7 +9,7 @@ public class UsedProduct extends Product {
 	private static DecimalFormat df = new DecimalFormat("0.00");
 
 	private Date manufactureDate;
-	// ------------------------------------------------------------------------ >
+
 	public UsedProduct() {
 		super();
 	}
@@ -18,7 +18,7 @@ public class UsedProduct extends Product {
 		super(name, price);
 		this.manufactureDate = manufactureDate;
 	}
-	// ------------------------------------------------------------------------ >
+
 	public Date getManufactureDate() {
 		return manufactureDate;
 	}
@@ -26,16 +26,13 @@ public class UsedProduct extends Product {
 	public void setManufactureDate(Date manufactureDate) {
 		this.manufactureDate = manufactureDate;
 	}
-	// ------------------------------------------------------------------------ >
-	
+
 	@Override
 	public String priceTag() {
-		
-		// Iphone (used) $ 400.00 (Manufacture date: 15/03/2017)
 
 		StringBuilder sb = new StringBuilder();
 
-		sb.append(name + "(used) $ " + df.format(price) +" (Manufacture date: " + sdf.format(manufactureDate) + ")");
+		sb.append(name + "(used) $ " + df.format(price) + " (Manufacture date: " + sdf.format(manufactureDate) + ")");
 
 		return sb.toString();
 	}

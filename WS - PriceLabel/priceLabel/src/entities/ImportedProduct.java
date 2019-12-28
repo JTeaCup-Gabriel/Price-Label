@@ -32,7 +32,6 @@ public class ImportedProduct extends Product {
 	@Override
 	public String priceTag() {
 
-		// Tablet $ 280.00 (Customs fee: $ 20.00)
 
 		StringBuilder sb = new StringBuilder();
 
